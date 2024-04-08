@@ -154,7 +154,8 @@ class BayesClassifier:
 
         # for debugging purposes, it may help to print the overall positive and negative
         # probabilities
-        
+        print(f"Positive Probability: {positive_probability}")
+        print(f"Negative Probability: {negative_probability}")
 
         # determine whether positive or negative was more probable (i.e. which one was
         # larger)
@@ -295,3 +296,26 @@ if __name__ == "__main__":
     print("\nThe following should all be negative.")
     print(b.classify('rainy days are the worst'))
     print(b.classify('computer science is terrible'))
+
+    # Exploring Naive Bayes Assignment
+    print("\nThe following is to test out the method with each groups responses")
+    
+    # Positive Random Text
+    print(b.classify("I'm so excited for the solar eclipse! It's going to be so cool!"))
+    print(b.classify("Programming can be challenging, but it is very rewarding!"))
+    print(b.classify("I can't believe this was the best carrot I have ever had!"))
+    print(b.classify("I enjoy watching movies with Robert Downy Jr in it."))
+
+    # Negative Random Text
+    print(b.classify("The solar eclipse is going to be boring, why should we waste our time?"))
+    print(b.classify("I do NOT like reading long books, and this was worse than a long book."))
+    print(b.classify("Ew, the food tasted worse than it looked."))
+    print(b.classify("Waking up early is my least favorite thing to do everyday."))
+
+    # Positive Movie Reviews
+    print(b.classify('This is great fun. A big, dumb movie that tries to explain with scientific language how we get to a place called "Hollow Earth."'))
+    print(b.classify("Smart, slick and subversive, this creature feature has plenty of bite."))
+
+    # Negative Movie Reviews
+    print(b.classify("Without enough humor to assimilate such nonsense, Godzilla and Kong: The New Empire is an ugly film in its form and honors the hollow earth in which the action takes place and ultimately, is unbearable to watch."))
+    print(b.classify("Whether you’re looking for a spider movie to make your skin crawl or a self-aware one for the laughs, Sting isn’t it."))
